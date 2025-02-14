@@ -1,74 +1,84 @@
-html {
-  height: 100%;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-  background: linear-gradient(117deg, #ff41f7 0%, rgba(255, 73, 73, 0.81) 100%);
-}
-h1 {
-  text-align: center;
-  color: white;
-  font-size: 72px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-.btn {
-  color: gray;
-  background-color: white;
-  border: none;
-  border-radius: 50px;
-  width: 200px;
-  height: 50px;
-  margin: 25px 10px;
-  font-weight: bold;
-}
-.btn:hover {
-  background-color: #ff4690;
-  border: 2px solid white;
-}
-@media (max-width: 1148px) {
-  h1 {
-    font-size: 50px;
-  }
-  .btn {
-    width: 150px;
-    height: 40px;
-  }
-}
-@media (max-width: 795px) {
-  h1 {
-    font-size: 40px;
-  }
-}
-#showMessage {
-  display: none;
-}
-#showMessage h1 {
-  font-size: 50px;
-}
-/* Animate Text */
-.ml6 {
-  position: relative;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
 }
 
-.ml6 .text-wrapper {
-  position: relative;
-  display: inline-block;
-  padding-top: 0.2em;
-  padding-right: 0.05em;
-  padding-bottom: 0.1em;
-  overflow: hidden;
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
-.ml6 .letter {
-  display: inline-block;
-  line-height: 1em;
+.memory {
+    width: 80%;
+    height: 100vh;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Footer */
-footer {
-  color: #fff;
+.text-section, .end-section {
+    width: 80%;
+    height: 20vh;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
 }
-footer a {
-  color: white;
-  text-decoration: none;
+
+.memory {
+    background-size: cover;
+    background-position: center;
+}
+
+.text-section {
+    /*background-color: rgba(255, 255, 255, 0.8);*/
+    padding: 20px;
+    text-align: center;
+    font-family: "La Belle Aurore", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.end-section {
+    flex-direction: column;
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    color: white;
+}
+
+#redirect-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#redirect-button:hover {
+    background-color: #ff3b2f;
+}
+
+.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
