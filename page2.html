@@ -2,48 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=La+Belle+Aurore&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Propose</title>
-    <!-- Adding Favicon -->
-    <link rel="shortcut icon" type="image/jpg" href="heart.png"/>
-    <!-- Bootstrap CDN -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <!-- Custom CSS -->
+    <title>Memory Lane Collage</title>
     <link rel="stylesheet" href="styles/style2.css">
 </head>
 <body>
-    <div class="position-absolute top-50 start-50 translate-middle">
-        <div id="parentElement">
-            <div class="d-flex justify-content-center">
-                <lottie-player src="https://assets10.lottiefiles.com/private_files/lf30_mywfoph1.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
-            </div>
-                <h1>Will you be my Wife🥰?</h1>
-            <div class="d-flex justify-content-center">
-                <button onclick="propose()" class="btn btn-primary">Yes!</button> <br>
-                <button onclick="propose()" class="btn btn-primary">Of Course, Yes!</button>
-            </div>
+    <div class="container">
+        <div class="memory" style="background-image: url('https://idahochildrenstrustfund.org/wp-content/uploads/play_is_healthy.jpg');"></div>
+        <div class="text-section">
+            <p>This is a special memory from our trip to the mountains.</p>
         </div>
-        <div class="position-absolute top-50 start-50 translate-middle" id="showMessage">
-            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_utsfwa3k.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay></lottie-player>
-            <h1 class="ml6" >
-                <span class="text-wrapper">
-                    <span class="letters">I Love you!</span>
-                </span>
-            </h1>
+        <div class="memory" style="background-image: url('https://media.istockphoto.com/id/638620778/photo/group-of-small-kids-having-fun-while-playing-in-nature.jpg?s=612x612&w=0&k=20&c=mDMSWo948u5fheX_SS3uMtCMDnnoM_LbS1jUkeSBjQE=');"></div>
+        <div class="text-section">
+            <p>Remember the time we spent by the beach? It was magical.</p>
+        </div>
+        <div class="memory" style="background-image: url('https://media.istockphoto.com/id/1662857795/photo/happy-family-relaxing-in-the-park.jpg?s=612x612&w=0&k=20&c=MQ8HBA5tE0HmlsFuvXxf3aIohKJRgDsB_DanOPu-i6o=');"></div>
+        <div class="text-section">
+            <p>Remember the time we spent by the beach? It was magical.</p>
+        </div>
+        <div class="memory" style="background-image: url('https://www.shutterstock.com/shutterstock/videos/1090570595/thumb/6.jpg?ip=x480');"></div>
+        <div class="text-section">
+            <p>Remember the time we spent by the beach? It was magical.</p>
+        </div>
+        
+        <div class="end-section">
+            <button id="redirect-button">lets go further</button>
         </div>
     </div>
-    <!-- <footer class="position-absolute top-100 start-50 translate-middle">Made with 💝 love by <a href="">Mujahid</a> <footer> -->
-
-
-
-    <!-- LottieFiles CDN -->
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
-    <!-- Anim JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <!-- Custom JavaScript -->
     <script src="scripts/script2.js"></script>
 </body>
 </html>
