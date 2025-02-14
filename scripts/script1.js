@@ -44,6 +44,6 @@ letsGoButton.addEventListener('click', () => {
 
   // Redirect to another page after the animation
   setTimeout(() => {
-    window.location.href = 'another-page.html'; // Change this to your desired page
+    window.location.href = 'page2.html'; // Change this to your desired page
   }, 300); // Wait for the animation to finish
 });
