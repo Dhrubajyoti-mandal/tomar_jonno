@@ -1,34 +1,25 @@
-const parentElement = document.getElementById("parentElement");
-const showMassage = document.getElementById("showMassage");
-const changeColor = document.body.style;
+// Play background music on scroll
+document.addEventListener("scroll", () => {
+    const audio = document.getElementById("background-music");
+    if (audio.paused) {
+        audio.play();
+    }
+});
 
-propose = () => {
-  parentElement.style.display = "none";
-  showMessage.style.display = "block";
-  changeColor.background =
-    "linear-gradient(116.82deg, #ff94e7 0%, #27cbff 100%)";
-};
+// Fade-in effect for memories and text sections
+document.addEventListener("scroll", () => {
+    const elements = document.querySelectorAll(".memory, .text-section, .end-section");
+    elements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementBottom = element.getBoundingClientRect().bottom;
+        if (elementTop < window.innerHeight && elementBottom > 0) {
+            element.classList.add("visible");
+        } else {
+            element.classList.remove("visible");
+        }
+    });
+});
 
-// Animate Text with Anim JS
-var textWrapper = document.querySelector(".ml6 .letters");
-textWrapper.innerHTML = textWrapper.textContent.replace(
-  /\S/g,
-  "<span class='letter'>$&</span>"
-);
-
-anime
-  .timeline({ loop: true })
-  .add({
-    targets: ".ml6 .letter",
-    translateY: ["1.1em", 0],
-    translateZ: 0,
-    duration: 750,
-    delay: (el, i) => 50 * i,
-  })
-  .add({
-    targets: ".ml6",
-    opacity: 0,
-    duration: 1000,
-    easing: "easeOutExpo",
-    delay: 1000,
-  });
+// Redirect button functionality
+document.getElementById("redirect-button").addEventListener("click", () => {
+    window.location.href = "next-page.html"; // Replace with your desired URL
