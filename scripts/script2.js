@@ -4,10 +4,8 @@ document.addEventListener("scroll", () => {
     if (audio.paused) {
         audio.play();
     }
-});
 
-// Fade-in effect for memories and text sections
-document.addEventListener("scroll", () => {
+    // Fade-in effect for memories and text sections
     const elements = document.querySelectorAll(".memory, .text-section, .end-section");
     elements.forEach(element => {
         const elementTop = element.getBoundingClientRect().top;
@@ -23,3 +21,4 @@ document.addEventListener("scroll", () => {
 // Redirect button functionality
 document.getElementById("redirect-button").addEventListener("click", () => {
     window.location.href = "next-page.html"; // Replace with your desired URL
+});
